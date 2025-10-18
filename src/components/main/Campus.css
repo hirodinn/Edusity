@@ -5,6 +5,35 @@
   width: 80vw;
   max-width: 1000px;
   margin: 0 auto;
+  margin-bottom: 70px;
+}
+.campus .info {
+  text-align: center;
+}
+.campus .info p {
+  margin: 60px 0 15px 0;
+  font-weight: bold;
+  font-size: 20px;
+}
+.campus .info h1 {
+  margin-bottom: 50px;
+}
+
+.campus .see-more {
+  margin: 0 auto 70px;
+  background-color: #212ea0;
+  width: fit-content;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.campus .see-more img {
+  width: 20px;
+  margin-left: 6px;
 }
 .campus .box-container .box {
   width: 23%;

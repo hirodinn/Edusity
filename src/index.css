@@ -14,3 +14,9 @@ html {
   z-index: -4;
   background-color: #f5f5f5;
 }
+.blue-color {
+  color: #212ea0;
+}
+.dark-blue-color {
+  color: #000f38;
+}

@@ -11,7 +11,7 @@ export function Navigators({ orientation, hide }) {
         <a href="#about-us">About us</a>
       </li>
       <li>
-        <a href="#">Campus</a>
+        <a href="#campus">Campus</a>
       </li>
       <li>
         <a href="#">Testimonials</a>

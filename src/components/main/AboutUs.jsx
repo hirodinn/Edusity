@@ -6,8 +6,8 @@ export function AboutUs() {
         <img src="/about-us/play.png" />
       </div>
       <div className="info">
-        <h4>ABOUT UNIVERSITY</h4>
-        <h1>Nurturing Tomorrow's Leaders Today</h1>{" "}
+        <h4 className="blue-color">ABOUT UNIVERSITY</h4>
+        <h1 className="dark-blue-color">Nurturing Tomorrow's Leaders Today</h1>
         <p>
           Embark on a transformative educational journey with our university's
           comprehensive education programs. Our cutting-edge curriculum is
@@ -15,7 +15,6 @@ export function AboutUs() {
           experiences needed to excel in the dynamic field of education.
         </p>
         <p>
-          {" "}
           With a focus on innovation, hands-on learning, and personalized
           mentorship, our programs prepare aspiring educators to make a
           meaningful impact in classrooms, schools, and communities.{" "}
