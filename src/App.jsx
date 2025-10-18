@@ -6,6 +6,29 @@ export default function App() {
   const [playVideo, setPlayVideo] = useState(false);
   let clickedInside = false;
 
+  useEffect(() => {
+    if (playVideo) {
+      const scrollY = window.scrollY;
+
+      const preventScroll = (e) => {
+        window.scrollTo(0, scrollY);
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      };
+
+      window.addEventListener("scroll", preventScroll);
+      window.addEventListener("wheel", preventScroll, { passive: false });
+      window.addEventListener("touchmove", preventScroll, { passive: false });
+
+      return () => {
+        window.removeEventListener("scroll", preventScroll);
+        window.removeEventListener("wheel", preventScroll);
+        window.removeEventListener("touchmove", preventScroll);
+      };
+    }
+  }, [playVideo]);
+
   function useWindowWidth() {
     const [width, setWidth] = useState(window.innerWidth);
     useEffect(() => {
