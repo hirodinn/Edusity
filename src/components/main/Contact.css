@@ -68,6 +68,9 @@
   background-color: #ebecfe;
   padding: 14px;
 }
+.contact-container .address .right form textarea:focus {
+  outline: none;
+}
 .contact-container .address .right form button {
   width: fit-content;
   padding: 10px 18px;

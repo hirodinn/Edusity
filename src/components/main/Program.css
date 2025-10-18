@@ -26,6 +26,7 @@
   background-position: center;
   background-size: cover;
   position: relative;
+  cursor: pointer;
 }
 .program .box-container .box .info {
   display: flex;
