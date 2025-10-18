@@ -1,3 +1,6 @@
+.campus {
+  padding-top: 50px;
+}
 .campus .box-container {
   display: flex;
   align-items: center;
@@ -20,7 +23,7 @@
 }
 
 .campus .see-more {
-  margin: 0 auto 70px;
+  margin: 0 auto 20px;
   background-color: #212ea0;
   width: fit-content;
   color: white;
