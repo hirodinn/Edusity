@@ -1,0 +1,60 @@
+.about-us .video-player {
+  background-image: url("/about-us/cover.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 50px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.about-us .video-player img {
+  display: flex;
+  width: 70px;
+}
+
+.about-us {
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  height: 500px;
+}
+.about-us .info {
+  color: #000f38;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-us .info h1 {
+  max-width: 400px;
+  margin: 10px 0;
+}
+.about-us .info p {
+  color: #676767;
+  margin: 10px 0;
+}
+
+@media (max-width: 800px) {
+  .about-us {
+    width: 95vw !important;
+    padding: 0;
+    flex-direction: column-reverse;
+    height: fit-content !important;
+  }
+  .about-us .info {
+    width: 90%;
+  }
+  .about-us .video-player {
+    margin: 0;
+    width: 80vw;
+    height: 400px;
+  }
+}
