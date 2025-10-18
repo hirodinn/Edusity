@@ -14,7 +14,7 @@ export function Navigators({ orientation, hide }) {
         <a href="#campus">Campus</a>
       </li>
       <li>
-        <a href="#">Testimonials</a>
+        <a href="#testimonial">Testimonials</a>
       </li>
       <li>
         <a href="#" className="contact">

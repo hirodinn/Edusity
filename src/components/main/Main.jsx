@@ -1,3 +1,4 @@
+import { Testimonial } from "../header/Testimonial";
 import { AboutUs } from "./AboutUs";
 import { Campus } from "./Campus";
 import { HomeExplore } from "./HomeExplore";
@@ -10,6 +11,7 @@ export function Main() {
       <Program />
       <AboutUs />
       <Campus />
+      <Testimonial />
     </main>
   );
 }
