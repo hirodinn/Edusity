@@ -10,7 +10,6 @@
   align-items: center;
   justify-content: center;
   color: white;
-  z-index: -2;
 }
 .home-explore::before {
   content: "";
@@ -20,7 +19,6 @@
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: -1;
 }
 .home-explore .information {
   max-width: 800px;

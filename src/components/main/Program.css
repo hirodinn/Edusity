@@ -1,5 +1,65 @@
 .program {
-  height: 90vh;
   width: 100vw;
-  background-color: lightblue;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  text-align: center;
+  overflow: hidden;
+}
+.program .box-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 1000px;
+  height: 25vw;
+  max-height: 300px;
+  margin: 100px auto;
+}
+.program .box-container .box {
+  width: 30%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.program .box-container .box .info {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: #000f984d;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+.program .box-container .box .info img {
+  width: 50px;
+}
+.program .box-container .box.hovered .info {
+  transform: translateY(0) !important;
+}
+
+@media (max-width: 700px) {
+  .program .box-container .box {
+    width: 400px;
+    height: 400px;
+    margin-bottom: 20px;
+  }
+  .program .box-container {
+    flex-wrap: wrap;
+    width: 90vw;
+    min-height: fit-content;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+  }
 }

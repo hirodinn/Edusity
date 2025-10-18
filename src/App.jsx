@@ -31,10 +31,7 @@ function useScrollPosition() {
 }
 export default function App() {
   return (
-    <div
-      className="total-container"
-      onScrollCapture={() => console.log("scrolled")}
-    >
+    <div className="total-container">
       <Header width={useWindowWidth()} height={useScrollPosition()} />
       <Main />
     </div>
