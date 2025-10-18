@@ -17,7 +17,7 @@ export function Contact() {
     alert("Form submitted successfully!");
   };
   return (
-    <section className="contact" id="contact">
+    <section id="contact">
       <div className="contact-container">
         <div className="info">
           <h4 className="blue-color">CONTACT US</h4>
@@ -46,8 +46,10 @@ export function Contact() {
             </div>
             <div className="each">
               <img src="/contact/location.png" />
-              <p>77 Massachusetts Ave, Cambridge</p>
-              <p>MA 02139, United States</p>
+              <div>
+                <p>77 Massachusetts Ave, Cambridge</p>
+                <p>MA 02139, United States</p>
+              </div>
             </div>
           </div>
           <div className="right">
@@ -72,12 +74,13 @@ export function Contact() {
                 id="text"
                 rows="7"
               ></textarea>
-              <HCaptcha
-                sitekey="YOUR_HCAPTCHA_SITE_KEY"
-                onVerify={handleVerify}
-                ref={captchaRef}
-              />
-
+              <div className="capcha">
+                <HCaptcha
+                  sitekey="YOUR_HCAPTCHA_SITE_KEY"
+                  onVerify={handleVerify}
+                  ref={captchaRef}
+                />
+              </div>
               <button type="submit" s>
                 Submit now →
               </button>
