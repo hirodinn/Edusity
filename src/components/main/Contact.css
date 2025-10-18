@@ -1,10 +1,10 @@
 #contact {
   width: 100vw;
+  padding-top: 80px;
 }
 .contact-container {
   width: 80%;
   max-width: 1200px;
-  border: 2px solid;
   margin: 0 auto;
 }
 .contact-container .address {
@@ -82,6 +82,21 @@
   margin: 0 auto;
 }
 
+.contact-container footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid;
+  padding: 15px 0;
+}
+.contact-container footer ul {
+  list-style-type: none;
+  display: flex;
+}
+.contact-container footer ul li {
+  margin: 0 13px;
+  cursor: pointer;
+}
 @media (max-width: 700px) {
   .contact-container .address {
     flex-direction: column;
@@ -89,5 +104,11 @@
   }
   .contact-container .address > div {
     min-width: 80%;
+  }
+  .contact-container footer {
+    font-size: 13px;
+  }
+  .contact-container footer ul li {
+    margin: 0 9px;
   }
 }

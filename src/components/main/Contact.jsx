@@ -87,6 +87,17 @@ export function Contact() {
             </form>
           </div>
         </div>
+        <footer>
+          <p>© 2024 Edusity. All rights reserved.</p>
+          <ul>
+            <li>
+              <a>Terms of Services</a>
+            </li>
+            <li>
+              <a>Privacy Policy</a>
+            </li>
+          </ul>
+        </footer>
       </div>
     </section>
   );
