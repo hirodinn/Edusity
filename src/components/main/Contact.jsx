@@ -1,5 +1,21 @@
+import { useState, useRef } from "react";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 import "./Contact.css";
 export function Contact() {
+  const [token, setToken] = useState(null);
+  const captchaRef = useRef(null);
+
+  const handleVerify = (token) => {
+    setToken(token);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!token) {
+      alert("Please complete the captcha first!");
+      return;
+    }
+    alert("Form submitted successfully!");
+  };
   return (
     <section className="contact" id="contact">
       <div className="contact-container">
@@ -35,7 +51,7 @@ export function Contact() {
             </div>
           </div>
           <div className="right">
-            <form>
+            <form onSubmit={handleSubmit}>
               <label for="name">Your name</label>
               <input type="text" placeholder="Enter your name" id="name" />
               <label for="mobile-number">Phone Number</label>
@@ -56,6 +72,15 @@ export function Contact() {
                 id="text"
                 rows="7"
               ></textarea>
+              <HCaptcha
+                sitekey="YOUR_HCAPTCHA_SITE_KEY"
+                onVerify={handleVerify}
+                ref={captchaRef}
+              />
+
+              <button type="submit" s>
+                Submit now →
+              </button>
             </form>
           </div>
         </div>
