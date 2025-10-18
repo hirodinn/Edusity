@@ -3,7 +3,7 @@ import { ProgramBox } from "./ProgramBox";
 export function Program() {
   return (
     <section className="program" id="program">
-      <h4 style={{ color: "#212ea0", margin: "60px 0 15px 0" }}>OUR PROGRAM</h4>
+      <h4 style={{ color: "#212ea0", margin: "80px 0 15px 0" }}>OUR PROGRAM</h4>
       <h1>What We Offer</h1>
       <div className="box-container">
         <ProgramBox

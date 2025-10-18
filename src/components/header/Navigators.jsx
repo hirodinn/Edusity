@@ -8,7 +8,7 @@ export function Navigators({ orientation, hide }) {
         <a href="#program">Program</a>
       </li>
       <li>
-        <a href="#">About us</a>
+        <a href="#about-us">About us</a>
       </li>
       <li>
         <a href="#">Campus</a>
