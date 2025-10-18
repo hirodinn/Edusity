@@ -8,4 +8,5 @@
   align-items: center;
   margin-left: auto;
   cursor: pointer;
+  z-index: 3;
 }
