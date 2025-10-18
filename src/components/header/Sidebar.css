@@ -1,0 +1,11 @@
+.toggle-button img {
+  max-width: 30px;
+}
+.toggle-button {
+  background: transparent;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  cursor: pointer;
+}
