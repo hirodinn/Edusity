@@ -1,0 +1,29 @@
+.campus .box-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.campus .box-container .box {
+  width: 23%;
+  height: fit-content;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.campus .box-container .box img {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 800px) {
+  .campus .box-container {
+    flex-wrap: wrap;
+  }
+  .campus .box-container .box {
+    width: 47%;
+    margin-bottom: 20px;
+  }
+}
