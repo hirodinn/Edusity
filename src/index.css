@@ -6,3 +6,6 @@
   font-family: "Outfit", sans-serif;
   border: none;
 }
+.total-container {
+  overflow-x: hidden;
+}

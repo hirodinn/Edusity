@@ -6,11 +6,11 @@
   height: 70px;
   display: flex;
   align-items: center;
-  background-color: #212ea0;
   background: transparent;
   overflow: hidden;
   padding: 0 7%;
   --margin: 13px;
+  transition: background 0.5s;
 }
 #home img {
   width: 170px;
@@ -73,4 +73,8 @@
 }
 .hide {
   transform: translateX(200px);
+}
+
+.solid {
+  background-color: #212ea0 !important;
 }
