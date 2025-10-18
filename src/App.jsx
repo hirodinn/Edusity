@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Header } from "./components/header/Header";
+import { Main } from "./components/main/Main";
 function useWindowWidth() {
   const [width, setWidth] = useState(window.innerWidth);
 
@@ -18,6 +19,7 @@ export default function App() {
   return (
     <div className="total-container">
       <Header width={useWindowWidth()} />
+      <Main />
     </div>
   );
 }
