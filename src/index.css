@@ -20,3 +20,17 @@ html {
 .dark-blue-color {
   color: #000f38;
 }
+
+.video-play {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.486);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video-play video {
+  width: 70vw;
+}

@@ -1,9 +1,14 @@
 import "./AboutUs.css";
-export function AboutUs() {
+export function AboutUs({ setPlayVideo }) {
   return (
     <section className="about-us" id="about-us">
       <div className="video-player">
-        <img src="/about-us/play.png" />
+        <img
+          src="/about-us/play.png"
+          onClick={() => {
+            setPlayVideo(true);
+          }}
+        />
       </div>
       <div className="info">
         <h4 className="blue-color">ABOUT UNIVERSITY</h4>

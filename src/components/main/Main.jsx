@@ -5,12 +5,12 @@ import { Contact } from "./Contact";
 import { HomeExplore } from "./HomeExplore";
 import "./Main.css";
 import { Program } from "./Program";
-export function Main() {
+export function Main({ setPlayVideo }) {
   return (
     <main>
       <HomeExplore />
       <Program />
-      <AboutUs />
+      <AboutUs setPlayVideo={setPlayVideo} />
       <Campus />
       <Testimonial />
       <Contact />
