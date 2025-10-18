@@ -1,0 +1,68 @@
+.contact {
+  width: 100vw;
+}
+.contact-container {
+  width: 80%;
+  max-width: 1200px;
+  border: 2px solid;
+  margin: 0 auto;
+}
+.contact-container .address {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.contact-container .info {
+  text-align: center;
+}
+.contact .address .left {
+  width: 48%;
+  border: 2px solid;
+  color: gray;
+}
+.contact-container .each {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+.contact-container .each img {
+  width: 20px;
+  margin: 0 15px 0 0;
+}
+.contact-container .each.message {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+.contact-container .each.message img {
+  width: 30px;
+  margin: 0 15px;
+}
+
+.contact-container .address .right {
+  width: 48%;
+  border: 2px solid red;
+}
+.contact-container .address .right form {
+  display: flex;
+  flex-direction: column;
+  color: gray;
+}
+.contact-container .address .right form label {
+  margin-bottom: 4px;
+}
+.contact-container .address .right form input {
+  height: 50px;
+  background-color: #ebecfe;
+  margin-bottom: 13px;
+  padding-left: 20px;
+}
+.contact-container .address .right form input:focus {
+  outline: none;
+}
+.contact-container .address .right form textarea {
+  margin: 10px 0;
+  background-color: #ebecfe;
+  padding: 14px;
+}
