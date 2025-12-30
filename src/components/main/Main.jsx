@@ -1,3 +1,5 @@
+import { Stats } from "./Stats";
+import { FAQ } from "./FAQ";
 import { Testimonial } from "../header/Testimonial";
 import { AboutUs } from "./AboutUs";
 import { Campus } from "./Campus";
@@ -5,9 +7,6 @@ import { Contact } from "./Contact";
 import { HomeExplore } from "./HomeExplore";
 import { Program } from "./Program";
 import { ScrollReveal } from "../common/ScrollReveal";
-
-import "./Main.css";
-import { Stats } from "./Stats";
 
 export function Main({ setPlayVideo }) {
   return (
@@ -26,6 +25,9 @@ export function Main({ setPlayVideo }) {
       </ScrollReveal>
       <ScrollReveal animation="reveal-scale">
         <Campus />
+      </ScrollReveal>
+      <ScrollReveal animation="reveal-up">
+        <FAQ />
       </ScrollReveal>
       <ScrollReveal animation="reveal-up">
         <Testimonial />
