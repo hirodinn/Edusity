@@ -90,12 +90,11 @@ export function Contact() {
         <footer>
           <p>© 2024 Edusity. All rights reserved.</p>
           <ul>
-            <li>
-              <a>Terms of Services</a>
-            </li>
-            <li>
-              <a>Privacy Policy</a>
-            </li>
+            <li>Terms of Services</li>
+            <li>Privacy Policy</li>
+            <li className="blue-color">Facebook</li>
+            <li className="blue-color">Twitter</li>
+            <li className="blue-color">LinkedIn</li>
           </ul>
         </footer>
       </div>
