@@ -34,3 +34,25 @@ html {
 .video-play video {
   width: 70vw;
 }
+
+/* Premium Scroll Reveal (Scroll Loading) */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1.2s cubic-bezier(0.5, 0, 0, 1),
+    transform 1.2s cubic-bezier(0.5, 0, 0, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9) translateY(30px);
+  transition: opacity 1s cubic-bezier(0.5, 0, 0, 1),
+    transform 1s cubic-bezier(0.5, 0, 0, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}

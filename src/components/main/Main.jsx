@@ -5,15 +5,29 @@ import { Contact } from "./Contact";
 import { HomeExplore } from "./HomeExplore";
 import "./Main.css";
 import { Program } from "./Program";
+import { ScrollReveal } from "../common/ScrollReveal";
+
 export function Main({ setPlayVideo }) {
   return (
     <main>
-      <HomeExplore />
-      <Program />
-      <AboutUs setPlayVideo={setPlayVideo} />
-      <Campus />
-      <Testimonial />
-      <Contact />
+      <ScrollReveal animation="reveal-up">
+        <HomeExplore />
+      </ScrollReveal>
+      <ScrollReveal animation="reveal-scale">
+        <Program />
+      </ScrollReveal>
+      <ScrollReveal animation="reveal-up">
+        <AboutUs setPlayVideo={setPlayVideo} />
+      </ScrollReveal>
+      <ScrollReveal animation="reveal-scale">
+        <Campus />
+      </ScrollReveal>
+      <ScrollReveal animation="reveal-up">
+        <Testimonial />
+      </ScrollReveal>
+      <ScrollReveal animation="reveal-up">
+        <Contact />
+      </ScrollReveal>
     </main>
   );
 }
