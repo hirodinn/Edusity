@@ -22,7 +22,7 @@ html {
 }
 
 .video-play {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.486);
@@ -55,4 +55,13 @@ html {
 .reveal-visible {
   opacity: 1 !important;
   transform: translateY(0) scale(1) !important;
+}
+
+/* Fix double scrollbar and horizontal overflow */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
