@@ -1,6 +1,7 @@
 import { Stats } from "./Stats";
 import { FAQ } from "./FAQ";
 import { Faculty } from "./Faculty";
+import { Newsletter } from "./Newsletter";
 import { Testimonial } from "../header/Testimonial";
 import { AboutUs } from "./AboutUs";
 import { Campus } from "./Campus";
@@ -35,6 +36,9 @@ export function Main({ setPlayVideo }) {
       </ScrollReveal>
       <ScrollReveal animation="reveal-up">
         <Testimonial />
+      </ScrollReveal>
+      <ScrollReveal animation="reveal-up">
+        <Newsletter />
       </ScrollReveal>
       <ScrollReveal animation="reveal-up">
         <Contact />
