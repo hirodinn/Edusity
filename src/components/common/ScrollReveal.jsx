@@ -1,47 +1,64 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-/**
- * ScrollReveal component that animates its children when they enter the viewport.
- */
 export function ScrollReveal({
   children,
   animation = "reveal-up",
   threshold = 0.15,
 }) {
-  const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    if (!ref.current) return;
+    const element = ref.current;
+
+    let observer = null;
+
+    const reveal = () => {
+      // tiny delay ensures smooth first-load animation
+      setTimeout(() => setIsVisible(true), 50);
+      if (observer) observer.disconnect();
+    };
+
+    observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
+        if (entry.isIntersecting) reveal();
       },
-      {
-        threshold,
-        rootMargin: "0px 0px -50px 0px", // Trigger slightly before the element fully enters
-      }
+      { threshold }
     );
 
-    const currentRef = ref.current;
-    if (currentRef) {
-      observer.observe(currentRef);
+    // double requestAnimationFrame ensures layout is ready
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        try {
+          if (observer) observer.observe(element);
+        } catch (e) {
+          // ignore if observation fails on some browsers/environments
+        }
+      });
+    });
+
+    // fallback if element is already visible on mount
+    try {
+      const rect = element.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        reveal();
+      }
+    } catch (e) {
+      // element may be detached; ignore
     }
 
     return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
+      if (observer) observer.disconnect();
     };
   }, [threshold]);
 
   return (
     <div
       ref={ref}
-      className={`${animation} ${isVisible ? "reveal-visible" : ""}`}
-      style={{ width: "100%" }}
+      className={`reveal-container ${animation} ${
+        isVisible ? "reveal-visible" : ""
+      }`}
     >
       {children}
     </div>
